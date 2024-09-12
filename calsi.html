@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // switch(num){
+//       case 1: var number1 = (prompt('Enter first number: '));
+//                 var number2 =(prompt('Enter second number: '));
+    
+//          console.log( num1+num2)
+//          break;
+//     
+
+
+
+var result;
+
+var operator=window.prompt('Enter operator:');
+
+var number1= parseInt(prompt('Enter first number: '));
+var number2= parseInt(prompt('Enter second number: '));
+
+switch(operator)
+ {
+    case '+':
+         result = number1 + number2;
+        
+        document.write("The Addition is="+result);
+
+        break;
+
+    case '-':
+         result = number1 - number2;
+         document.write("The Substraction is="+result);
+        
+        break;
+
+    case '*':
+         result = number1 * number2;
+         document.write("The Multiplication is="+result);
+        
+        break;
+
+    case '/':
+         result = number1 / number2;
+         document.write("The Division is="+result);
+        
+        break;
+    
+    case '%':
+            result = number1 % number2;
+            document.write("The Mod is="+result);
+           
+        break;
+
+    case '**':
+            result = number1** number2;
+            document.write(result);
+           
+    break;
+
+    default:
+        document.write('Invalid operator');
+ }
+  
+    </script>
+</body>
+</html>

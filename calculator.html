@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 2px;
+            background-color:orange;
+            border-radius: 10px;
+            height: 250px;
+            width: 40%;
+           padding: 2%;
+        }
+        input
+        {
+            height: 50px;
+            width: 85%;
+            margin-left: 5%;
+
+        }
+        button{
+            height: 50px;
+            width: 50px;
+            color: orange;
+            background-color: black;
+            margin-left: 20%;
+            margin-top: 3%;
+            border: none;
+           border-radius: 50%;
+            font-size: 20px;
+            /* margin: 5px; */
+        }
+        .green{
+            color: white;
+        }
+        #clearbutton
+        {
+            background-color: indianred;
+           width: 71%;
+           margin-left: 9%;
+           border-radius: 25%!important
+
+         
+
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin-left: 4%;">⭐️SIMPLE CALCULATOR⭐️</h1>
+    <table id="table">
+        <tr>
+            <td colspan="4"><input type="text" id="screen"></td>
+        </tr>
+        <tr>
+            <td><button onclick="Number('(')"class="green">(</button></td>
+            <td><button onclick="Number(')')"class="green">)</button></td>
+            <td colspan="2"><button onclick="clearscreen1()" id="clearbutton">C</button></td>
+
+
+
+        </tr>
+        <tr>
+            <!-- <td><button onclick="clearscreen1()" >C</button></td> -->
+            <!-- <td><button onclick="Number('()')"class="green">()</button></td> -->
+            <td colspan="2"><button style="background-color: black;color: red;"onclick="cancle()"id="clearbutton">DEL</button></td>
+
+            <td><button onclick="Number('%')"class="green">%</button></td>
+            <td><button onclick="Number('/')"class="green">/</button></td>
+           
+        </tr>
+        <tr>
+            <td><button onclick="Number(7)">7</button></td>
+            <td><button onclick="Number(8)">8</button></td>
+            <td><button onclick="Number(9)">9</button></td>
+            <td><button onclick="Number('*')"class="green">*</button></td>
+           
+        </tr>
+        <tr>
+            <td><button onclick="Number(4)">4</button></td>
+            <td><button onclick="Number(5)">5</button></td>
+            <td><button onclick="Number(6)">6</button></td>
+            <td><button onclick="Number('-')"class="green">-</button></td>
+
+           
+        </tr>
+        <tr>
+            <td><button onclick="Number(1)">1</button></td>
+            <td><button onclick="Number(2)">2</button></td>
+            <td><button onclick="Number(3)">3</button></td>
+            <td><button onclick="Number('+')"class="green">+</button></td>
+        </tr>
+        <tr>
+            <!-- <td><button style="background-color: red;color: black;"onclick="cancle()">DEL</button></td> -->
+            <td><button onclick="Number(0)">0</button></td>
+            <td><button onclick="Number('.')">.</button></td>
+
+            <td colspan="2"><button onclick="result()"style="background-color:green;color:white;"id="clearbutton" >=</button></td>
+            <!-- <td><button onclick="Number('/')">/</button></td> -->
+        </tr>
+    </table>
+    <script>
+        function Number(num)
+        {
+            let res=document.getElementById("screen")
+            res.value+=num
+        }
+        function result()
+        {
+            let res=document.getElementById("screen")
+            res.value=eval(res.value)
+
+        }
+        function clearscreen1()
+        {
+            let res=document.getElementById("screen")
+            res.value=" "
+
+        }
+        function cancle()
+        {
+            let res=document.getElementById("screen")
+            res.value=res.value.slice(0,-1)
+
+        }
+       
+    </script>
+</body>
+</html>
